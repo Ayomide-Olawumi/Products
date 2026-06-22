@@ -1,8 +1,24 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Api = () => {
+    const navigate = useNavigate()
+    const [user, setUser] = useState({})
+
+  useEffect(() => {
+     setUser(JSON.parse(localStorage.getItem("user")))
+  }, [])
+
+
+  useEffect(() => {
+    if (!user){
+      return Navigate('/login')
+    }
+  }, [])
+
+
   const [products, setProducts] = useState([])
 
   useEffect(() => {

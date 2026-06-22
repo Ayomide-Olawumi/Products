@@ -1,0 +1,12 @@
+return(
+    <div>
+        <h1>
+            {product.title}
+        </h1>
+        {product.images && product.images.length > 1 ?(
+            <Carousel images = {product.images} />
+        ) : (
+            <img src = {item.thumbnail} alt={item.title} width = "100"/>
+        )}
+    </div>
+)
