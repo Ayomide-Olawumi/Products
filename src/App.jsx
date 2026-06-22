@@ -27,7 +27,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Products/>}/>
+        <Route path="/products" element={<Products/>}/>
         <Route path="/productdetails/:id" element={<ProductDetails />} />
         <Route path="/login" element={<Login />} />
         <Route path ="/dashboard" element= {<Dashboard/>}>
@@ -39,7 +39,7 @@ const App = () => {
         </Route>
         <Route path="/users" element={<Users />}/>
         <Route path="/user/:id" element={<User />}/>
-        <Route path= "/quotes" element={<Quotes/>}/>
+        <Route path= "/" element={<Quotes/>}/>
         <Route path= "/quote/:id" element={<Quote/>}/>
         <Route path= "/carousel" element={<Carousel/>}/>
         <Route path ="*" element= {<Notfound/>}/>
